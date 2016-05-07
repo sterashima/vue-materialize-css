@@ -5,15 +5,21 @@ module.exports = {
     publicPath: "/build/",
     filename: "build.js"
   },
-  module: [
-    {
-        test: /\.vue$/,
-        loader: 'vue'
-    },
-    {
-        test: /\.js$/,
-        loader: 'babel!eslint',
-        exclude: /node_modules/
-    }
-  ]
+  devtool: "inline-source-map",
+  module: {
+    loaders: [
+      {test: /\.vue$/,loader: 'vue'},
+      {
+        test: /\.js$/, 
+        exclude: /node_modules/, 
+        loader: "babel-loader",
+        query : {
+          "plugins": [
+            ["transform-es2015-template-literals", {"loose": true,"spec": true}]
+          ],
+          "presets": ["es2015","stage-0"]
+        }
+      }
+    ]
+  }
 }

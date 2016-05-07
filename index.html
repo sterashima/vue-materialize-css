@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue Materialize CSS</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<script type="text/javascript" src="build/build.js"></script>
+</head>
+<body>
+    <div id="main" class="row">
+        <div class="col s12">
+            <h2>Methods</h2>
+	        <h3>Tooltip</h3>
+	        <button class="btn" @mouseover="tooltip($event,'top','top',0)">top</button>
+	        <button class="btn" @mouseover="tooltip($event,'left','left')">left</button>    
+	        <button class="btn" @mouseover="tooltip($event,'bottom','bottom')">bottom</button>
+	        <button class="btn" @mouseover="tooltip($event,'right','right')">right</button>
+        </div>
+    </div>
+</body>
+</html>
