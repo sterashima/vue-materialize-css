@@ -9,12 +9,20 @@
 <body>
     <div id="main" class="row">
         <div class="col s12">
+        	<h2>Components</h2>
+        	<h3>Tab</h3>
+        	<tabs>
+        		<tab header="a">AA</tab>
+        		<tab header="b">BB</tab>
+        		<tab header="c">CC</tab>
+        		<tab header="d">DD</tab>
+        	</tabs>
             <h2>Methods</h2>
 	        <h3>Tooltip</h3>
-	        <button class="btn" @mouseover="tooltip($event,'top','top',0)">top</button>
-	        <button class="btn" @mouseover="tooltip($event,'left','left')">left</button>    
-	        <button class="btn" @mouseover="tooltip($event,'bottom','bottom')">bottom</button>
-	        <button class="btn" @mouseover="tooltip($event,'right','right')">right</button>
+	        <button class="btn" @mouseover="tooltip($event.target, 'top',   'top')">top</button>
+	        <button class="btn" @mouseover="tooltip($event.target, 'left',  'left')">left</button>    
+	        <button class="btn" @mouseover="tooltip($event.target, 'bottom','bottom')">bottom</button>
+	        <button class="btn" @mouseover="tooltip($event.target, 'right', 'right')">right</button>
         </div>
     </div>
 </body>
